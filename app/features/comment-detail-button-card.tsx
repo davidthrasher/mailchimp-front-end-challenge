@@ -23,6 +23,7 @@ export function CommentDetailButtonCard({
             details: { message, name, id, createdAt },
           })
         }
+        type="button"
         className="border border-gray-300 p-4 w-full h-full rounded hover:bg-gray-200 text-left flex flex-col justify-between shadow-xl"
       >
         <p className="multiple-line-ellipses">{message}</p>

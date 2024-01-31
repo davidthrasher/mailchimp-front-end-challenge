@@ -4,14 +4,12 @@
 
 .mail-chimp-cta {
   font-size: small;
-  background-color: white;
+  border: 1px solid black;
   font-weight: 700;
   height: 40px;
-  color: black;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid black;
   border-radius: 20px;
   padding: 12px;
   position: relative;
@@ -27,7 +25,7 @@
 }
 
 .bg-transparent-black {
-  background-color: rgb(0,0,0, 0.75);
+  background-color: rgb(0, 0, 0, 0.75);
 }
 
 .multiple-line-ellipses {
@@ -38,8 +36,7 @@
 }
 
 @layer components {
-  .max-h-1\/2{
+  .max-h-1\/2 {
     max-height: 50%;
   }
 }
-

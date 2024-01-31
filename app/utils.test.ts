@@ -1,13 +1,21 @@
-import { validateEmail } from "./utils";
+import { getNameAndFormattedTimeOfComment } from "~/utils";
 
-test("validateEmail returns false for non-emails", () => {
-  expect(validateEmail(undefined)).toBe(false);
-  expect(validateEmail(null)).toBe(false);
-  expect(validateEmail("")).toBe(false);
-  expect(validateEmail("not-an-email")).toBe(false);
-  expect(validateEmail("n@")).toBe(false);
-});
-
-test("validateEmail returns true for emails", () => {
-  expect(validateEmail("kody@example.com")).toBe(true);
+describe("getNameAndFormattedTimeOfComment", () => {
+  describe("When either name or createdAt args are falsy", () => {
+    it("Returns a string of unknown", () => {
+      expect(
+        getNameAndFormattedTimeOfComment({ name: "", createdAt: "" }),
+      ).toEqual("unknown");
+    });
+  });
+  describe("When name and createdAt args are passed", () => {
+    it("Returns them in a formatted string", () => {
+      expect(
+        getNameAndFormattedTimeOfComment({
+          name: "Charlie Kelly",
+          createdAt: "2024-01-31T22:29:53.992Z",
+        }),
+      ).toEqual("By: Charlie Kelly on 1/31/2024 at 5:29:53 PM");
+    });
+  });
 });

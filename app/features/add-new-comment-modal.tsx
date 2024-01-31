@@ -1,7 +1,7 @@
 import { useAtom } from "jotai/react";
 
-import { addNewCommentModalAtom } from "~/atoms/add-new-comment-modal-atom";
-import { Modal } from "~/components/modal";
+import { addNewCommentModalAtom } from "../atoms/add-new-comment-modal-atom";
+import { Modal } from "../components/modal";
 export function AddNewCommentModal() {
   const [isAddNewCommentModalVisible, setIsAddNewCommentModalVisible] = useAtom(
     addNewCommentModalAtom,

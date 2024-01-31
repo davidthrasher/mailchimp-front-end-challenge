@@ -13,6 +13,9 @@ export function createComment({
     },
   });
 }
+export function deleteComment({ id }: Pick<Comment, "id">) {
+  return prisma.comment.delete({ where: { id } });
+}
 export function getComments() {
   return prisma.comment.findMany({
     orderBy: {
@@ -23,8 +26,4 @@ export function getComments() {
 
 export function deleteComments() {
   return prisma.comment.deleteMany();
-}
-
-export function deleteComment({ id }: Pick<Comment, "id">) {
-  return prisma.comment.delete({ where: { id } });
 }

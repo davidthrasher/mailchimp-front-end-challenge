@@ -9,12 +9,7 @@ export async function action({ request }: ActionFunctionArgs) {
   if (typeof message !== "string" || typeof name !== "string") {
     return null;
   }
-  if (!message || !name) {
-    return {
-      errors:
-        "Please provide a name and message that are each greater than 0 characters",
-    };
-  }
+
   await createComment({
     message,
     name,
