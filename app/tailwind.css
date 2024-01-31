@@ -1,3 +1,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.mail-chimp-cta {
+  font-size: small;
+  background-color: white;
+  font-weight: 700;
+  height: 40px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 20px;
+  padding: 12px;
+  position: relative;
+  top: 0;
+}
+
+.bg-mailchimp-yellow {
+  background-color: #ffe01b;
+}
+
+.mail-chimp-cta:hover {
+  top: -2px;
+}
+
+.bg-transparent-black {
+  background-color: rgb(0,0,0, 0.75);
+}
+
+.multiple-line-ellipses {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@layer components {
+  .max-h-1\/2{
+    max-height: 50%;
+  }
+}
+

@@ -41,6 +41,7 @@ export function useMatchesData(
     () => matchingRoutes.find((route) => route.id === id),
     [matchingRoutes, id],
   );
+  console.log(route);
   return route?.data as Record<string, unknown>;
 }
 
